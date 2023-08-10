@@ -24,19 +24,29 @@ body {
     justify-content: space-around;
     text-align: center;
     background: #4f1210;
-    color: rgba(255, 255, 255, 0.791);
+    color: rgba(255, 255, 255, 0.829);
     border-bottom: 10px solid #cf7f24;
     border-top: 10px solid #cf7f24;
-    box-shadow: 8px 8px 20px black;
+    box-shadow: 10px 8px 15px black;
     border-radius: 25px;
+    
    
+}
+
+h2 ,p ,h4 {
+
+  text-shadow: 10px 5px 7px black;
+}
+
+h2 {
+
+  font-size: 25px;
 }
 
 
 .fa {
     padding: 20px;
     font-size: 20px;
-    width: 50%x;
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
@@ -55,5 +65,5 @@ body {
 
     cursor: pointer;
     box-shadow: 0px 0px 8px whitesmoke;
-    font-size: 23px;
+    font-size: 22px;
   }
