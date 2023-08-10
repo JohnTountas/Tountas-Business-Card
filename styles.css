@@ -2,8 +2,9 @@
 
 body {
     margin: 20px;
-    background: linear-gradient(rgb(188, 122, 72), rgb(135, 157, 49));
     font-family: Bricolage Grotesque, Tahoma, sans-serif;
+   background: linear-gradient(rgb(216, 168, 79), rgb(103, 103, 36));
+   
     
 }
 
@@ -24,9 +25,10 @@ body {
     color: black;
     border-bottom: 8px solid #cf7f24;
     box-shadow: 8px 8px 20px black;
-
-    
+   
 }
+
+
 .fa {
     padding: 20px;
     font-size: 30px;
