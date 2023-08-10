@@ -4,7 +4,7 @@ body {
 
     margin: 0px;
     font-family: Bricolage Grotesque, Tahoma, sans-serif;
-    background: linear-gradient(rgb(246, 205, 124), rgb(66, 56, 26));
+    background: linear-gradient(rgb(201, 170, 107), rgb(101, 91, 29));
    
     
 }
@@ -18,7 +18,6 @@ body {
 .card {
 
     width: 600px;
-    
     margin: 15% auto;
     padding: 20px 15px 45px 15px;
     display: flex;
