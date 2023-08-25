@@ -1,5 +1,5 @@
 # cobd74ef1ab096481c52ccdf8
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0d83ca48-9b7f-4b3f-ac5e-86dafd6182d3/deploy-status)](https://app.netlify.com/sites/myfirstbusinesscard/deploys)
 Quick start:
 
 ```
