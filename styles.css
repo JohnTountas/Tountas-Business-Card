@@ -32,8 +32,19 @@ body {
    
 }
 
+p {
+  
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  padding: 5px;
+  text-shadow: 5px 3px 8px black;
+  
 
-p ,i {
+}
+
+
+i {
 
   text-shadow: 5px 3px 8px black;
 }
