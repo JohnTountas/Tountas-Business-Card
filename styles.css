@@ -3,7 +3,8 @@ body {
 
     margin: 0px;
     font-family: Bricolage Grotesque, Tahoma, sans-serif;
-    background: linear-gradient(rgb(240, 239, 237), rgb(177, 177, 139));
+    background-image: url(images/galaxy.jpg);
+    
    
     
 }
