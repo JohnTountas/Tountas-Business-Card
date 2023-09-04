@@ -13,7 +13,7 @@ body {
     height: 250px;
     border-radius: 30px;
     box-shadow: 5px 6px 10px black;
-    margin: 120px 0px 0px 50px;
+    margin: 110px 0px 0px 40px;
 }
 
 .card {
@@ -25,13 +25,23 @@ body {
     justify-content: space-between;
     text-align: center;
     background: #314157;
-    color: rgba(248, 246, 246, 0.978);
-    border-bottom: 10px solid #cdc52e;
-    border-top: 10px solid #cdc52e;
-    box-shadow: 10px 8px 15px black;
+    color: rgba(251, 247, 247, 0.978);
+    border-bottom: 14px solid #cdc52e;;
+    border-top: 14px solid #cdc52e;
+    box-shadow: 12px 8px 15px black;
     border-radius: 30px;
    
 }
+
+.div {
+
+  
+    border-top: 3px solid;
+    border-image: linear-gradient(to right,#f1f5f7,#d80b77) 1 0 0 0;
+  
+  
+}
+
 
 p {
   
@@ -105,7 +115,7 @@ p {
     background: #007bb5;
     color: white;
     margin: 20px 0px 10px 50px; 
-    transition-duration: 0.1s;
+    transition-duration: 0.2s;
     transition-property: border-radius, font-size;
     
   }
@@ -124,8 +134,9 @@ p {
 
   ul li {
 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: rgb(223, 223, 63);
     font-size: 20px ;
-    
   }
+
+ 
