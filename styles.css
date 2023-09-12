@@ -95,7 +95,6 @@ p {
     text-decoration: none;
     margin: 5px 2px;
     border-radius: 50%;
-    padding-bottom: 0px;
     
   }
 
@@ -106,8 +105,10 @@ p {
     background: #007bb5;
     color: white;
     margin: 20px 0px 10px 50px; 
-    transition-duration: 0.2s;
+    transition-duration: 0.1s;
     transition-property: border-radius, font-size;
+    margin-bottom: 0px;
+    
     
   }
 
@@ -115,9 +116,11 @@ p {
   .fa-linkedin:hover {
 
     cursor: pointer;
-    box-shadow: 0px 0px 3px whitesmoke;
-    border-radius: 5px;
+    box-shadow: 0px 0px 7px whitesmoke;
+    border-radius: 8px;
     font-size: 16px;
+    
+    
    
     
   }
