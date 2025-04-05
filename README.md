@@ -1,5 +1,5 @@
 # Hello Everyone,
 
-This is my personal business card that shows my skills in programming.
+This business card shows my skills in programming:
 
-#
+You can check the Card HERE: https://tountascard.netlify.app/
