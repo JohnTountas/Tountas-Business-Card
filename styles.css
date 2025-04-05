@@ -19,6 +19,7 @@ body {
   width: 750px;
   margin: 10% 0px 0px 33.4%;
   padding: 33px 64px 53px 24px;
+  padding: min(5em ,8%);
   display: flex;
   justify-content: space-between;
   text-align: center;
