@@ -29,7 +29,7 @@ body {
   border-top: 14px solid #cdc52e;
   box-shadow: 12px 8px 15px black;
   border-radius: 30px;
-  
+  position: relative;
 }
 
 p {
