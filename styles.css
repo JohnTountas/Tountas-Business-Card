@@ -96,7 +96,7 @@ body {
   }
 }
 
-/* Reduce the size on very small screens  e.g: Mobiles*/
+/* Reduce the size on very small screens  e.g: mobiles*/
 @media only screen and (max-width: 320px) {
   .avatar {
     height: 120px; 
