@@ -62,7 +62,7 @@ body {
   border-radius: 25px;
   position: relative; /* Use relative for positioning */
 }
-/* Reduce the height on smaller screens */
+/* Reduce the size on smaller screens */
 @media only screen and (max-width: 768px) {
   .avatar {
     height: 230px; 
@@ -76,7 +76,7 @@ body {
     max-width: 90%; 
   }
 }
-/* Reduce the height on very small screens  e.g: tablets*/
+/* Reduce the size on very small screens  e.g: tablets*/
 @media only screen and (max-width: 480px) {
   .avatar {
     height: 150px; 
@@ -96,7 +96,7 @@ body {
   }
 }
 
-/* Reduce the height on very small screens  e.g: Mobiles*/
+/* Reduce the size on very small screens  e.g: Mobiles*/
 @media only screen and (max-width: 320px) {
   .avatar {
     height: 120px; 
