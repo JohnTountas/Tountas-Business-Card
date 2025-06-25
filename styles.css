@@ -1,6 +1,7 @@
 body {
   margin: 0px;
   padding: 0px;
+  min-height: 550px;
   font-family: inter, Bricolage Grotesque, sans-serif;
   background-image: url(images/background.jpg);
   background-repeat: no-repeat;
