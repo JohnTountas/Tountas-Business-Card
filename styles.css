@@ -1,11 +1,11 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family: Bricolage Grotesque, Tahoma, sans-serif;
+  font-family: inter, Bricolage Grotesque, sans-serif;
   background-image: url(images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  position: static;
 }
 
 .avatar {
@@ -16,11 +16,13 @@ body {
 }
 
 .card {
-  width: 750px;
-  margin: 10% 0px 0px 33.4%;
-  padding: 33px 64px 53px 24px;
-  
+  width: 90%;
+  max-width: 750px;
+  margin: 10% auto 0 auto;
+  padding: 2rem 4rem 3rem 1.5rem;
+
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   text-align: center;
   background: #314157;
@@ -30,6 +32,14 @@ body {
   box-shadow: 12px 8px 15px black;
   border-radius: 30px;
   position: relative;
+}
+
+/* Responsive adjustments */
+@media (min-width: 540px) {
+  .card {
+    flex-direction: row;
+    padding: 2rem 4rem;
+  }
 }
 
 p {
@@ -110,6 +120,13 @@ ul li {
   margin: 75px 0px 0px 55.5%;
   text-shadow: 3px 3px 5px black;
   color: rgb(231, 228, 228);
-  font-family: Bricolage Grotesque, Tahoma, sans-serif;
+  font-family: inter, Bricolage Grotesque, Tahoma, sans-serif;
   letter-spacing: 1px;
+}
+
+@media (min-width: 510px) {
+  .Myfooter {
+    flex-direction: column;
+    padding: 2rem 4rem;
+  }
 }
