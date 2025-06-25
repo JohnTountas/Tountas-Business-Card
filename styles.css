@@ -10,6 +10,7 @@ body {
 
 .avatar {
   height: 250px;
+  min-width: 350px;
   border-radius: 20%;
   box-shadow: 5px 6px 10px black;
   margin: 110px 0px 0px 40px;
