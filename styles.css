@@ -34,7 +34,7 @@ body {
   position: relative;
 }
 
-/* Responsive adjustments */
+
 @media (min-width: 540px) {
   .card {
     flex-direction: row;
