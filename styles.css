@@ -116,8 +116,8 @@ ul li {
 .Myfooter {
   position: flex;
   font-size: 17px;
-  margin: 75px 0px 0px 55.5%;
-  text-shadow: 3px 3px 5px black;
+  margin: 50px 0px 0px 55%;
+  text-shadow: 3px 3px 6px black;
   color: rgb(231, 228, 228);
   font-family: inter, Bricolage Grotesque, Tahoma, sans-serif;
   letter-spacing: 1px;
