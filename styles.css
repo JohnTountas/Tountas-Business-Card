@@ -6,34 +6,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: flex;
+  box-sizing: inherit;
 }
-
-/* .avatar {
-  height: 265px;
-  width: 320px;
-  border-radius: 20%;
-  box-shadow: 5px 6px 10px black;
-  margin: 105px 0px 0px 50px;
-  position: block;
-}
-
-.card {
-  font-family: inter, Bricolage Grotesque, sans-serif;
-  max-width: 750px;
-  margin: 10% auto auto auto;
-  padding: 2rem 0rem 3rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  background: #314157;
-  color: rgba(251, 247, 247, 0.978);
-  border-bottom: 14px solid #cdc52e;
-  border-top: 14px solid #cdc52e;
-  box-shadow: 12px 8px 15px black;
-  border-radius: 25px;
-  position: flex;
-} */
 
 .avatar {
   height: 265px;
@@ -65,29 +39,29 @@ body {
 /* Reduce the size on smaller screens */
 @media only screen and (max-width: 768px) {
   .avatar {
-    height: 230px; 
-    width: 280px; 
-    margin: 60px auto; 
+    height: 230px;
+    width: 280px;
+    margin: 60px auto;
   }
 
   .card {
-    padding: 1.5rem 1rem; 
-    margin: 5% auto; 
-    max-width: 90%; 
+    padding: 1.5rem 1rem;
+    margin: 5% auto;
+    max-width: 90%;
   }
 }
 /* Reduce the size on very small screens  e.g: tablets*/
 @media only screen and (max-width: 480px) {
   .avatar {
-    height: 150px; 
-    width: 180px; 
-    margin: 40px auto; 
+    height: 150px;
+    width: 180px;
+    margin: 40px auto;
   }
 
   .card {
-    padding: 1rem; 
-    margin: 5% auto; 
-    max-width: 95%; 
+    padding: 1rem;
+    margin: 5% auto;
+    max-width: 95%;
   }
 
   .card h1,
@@ -99,7 +73,7 @@ body {
 /* Reduce the size on very small screens  e.g: mobiles*/
 @media only screen and (max-width: 320px) {
   .avatar {
-    height: 120px; 
+    height: 120px;
     width: 150px;
   }
 
@@ -206,6 +180,5 @@ ul li {
   .Myfooter {
     flex-direction: column;
     padding: 2rem 4rem;
-    
   }
 }
