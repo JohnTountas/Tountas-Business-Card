@@ -2,11 +2,9 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: inter, Bricolage Grotesque, sans-serif;
-  overflow: hidden;
-  /* background-image: url(images/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; */
-  /* position: flex; */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Allow vertical scrolling */
+  min-height: 100vh; /* Ensure full viewport height */
 }
 
 .avatar {
@@ -17,23 +15,18 @@ body {
   margin: 105px 0px 0px 50px;
   position: block;
   max-width: 100%; /* Prevent overflow on smaller screens */
+  object-fit: cover; /* Maintain aspect ratio */
+  transition: all 0.3s ease; /* Smooth transitions */
 }
 
-/* .video-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-} */
-
 .bg_video {
-  position: absolute;
+  position: fixed; /* Changed from absolute to fixed */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
+  z-index: -1; /* Moved to background */
 }
 
 .card {
@@ -45,74 +38,342 @@ body {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  background: #314157;
+  background: rgba(
+    49,
+    65,
+    87,
+    0.95
+  ); /* Added transparency for better video visibility */
   color: rgba(251, 247, 247, 0.978);
   border-bottom: 14px solid #cdc52e;
   border-top: 14px solid #cdc52e;
   box-shadow: 12px 8px 15px black;
   border-radius: 25px;
-  position: relative; /* Use relative for positioning */
+  position: relative;
+  backdrop-filter: blur(5px); /* Modern glass effect */
+  transition: all 0.3s ease;
 }
 
-/* Reduce the size on smaller screens */
-@media only screen and (max-width: 768px) {
-  .avatar {
-    height: 230px;
-    width: 280px;
-    margin: 60px auto;
+/* Large Desktop Screens (1200px and above) */
+@media only screen and (min-width: 1200px) {
+  .card {
+    max-width: 900px;
+    padding: 3rem 2rem 4rem 2rem;
   }
 
+  .avatar {
+    height: 300px;
+    width: 360px;
+    margin: 120px 0px 0px 60px;
+  }
+
+  .Myname {
+    font-size: 52px;
+  }
+
+  .Dev {
+    font-size: 26px;
+  }
+
+  .progr {
+    font-size: 28px;
+  }
+
+  ul li {
+    font-size: 24px;
+  }
+}
+
+/* Desktop Screens (992px to 1199px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
   .card {
-    padding: 1.5rem 1rem;
-    margin: 5% auto;
+    max-width: 800px;
+    padding: 2.5rem 1.5rem 3.5rem 1.5rem;
+  }
+
+  .avatar {
+    height: 280px;
+    width: 340px;
+    margin: 110px 0px 0px 55px;
+  }
+
+  .Myname {
+    font-size: 48px;
+  }
+
+  .Dev {
+    font-size: 24px;
+  }
+
+  .progr {
+    font-size: 26px;
+  }
+}
+
+/* Tablets and Small Laptops (768px to 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .card {
     max-width: 90%;
-  }
-}
-/* Reduce the size on very small screens  e.g: tablets*/
-@media only screen and (max-width: 480px) {
-  .avatar {
-    height: 150px;
-    width: 180px;
-    margin: 40px auto;
-  }
-
-  .card {
-    padding: 1rem;
+    padding: 2rem 1.5rem 3rem 1.5rem;
     margin: 5% auto;
-    max-width: 95%;
   }
 
-  .card h1,
-  .card p {
-    font-size: 1.1rem;
+  .avatar {
+    height: 240px;
+    width: 290px;
+    margin: 80px auto 20px auto;
+  }
+
+  .Myname {
+    font-size: 42px;
+  }
+
+  .Dev {
+    font-size: 22px;
+  }
+
+  .progr {
+    font-size: 24px;
+    margin: 50px 0px 30px 0px;
+  }
+
+  ul li {
+    font-size: 18px;
+  }
+
+  .Myfooter {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
   }
 }
 
-/* Reduce the size on very small screens  e.g: mobiles*/
+/* Large Mobile Devices (481px to 767px) */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .card {
+    max-width: 95%;
+    padding: 1.5rem 1rem 2.5rem 1rem;
+    margin: 5% auto;
+    flex-direction: column;
+  }
+
+  .avatar {
+    height: 200px;
+    width: 240px;
+    margin: 40px auto 30px auto;
+  }
+
+  .Myname {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  .Dev {
+    font-size: 20px;
+  }
+
+  .progr {
+    font-size: 22px;
+    margin: 40px 0px 25px 0px;
+  }
+
+  ul li {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 10px 0px;
+    padding: 6px;
+  }
+
+  .fa-linkedin {
+    margin: 15px auto 10px auto;
+    display: block;
+    width: fit-content;
+  }
+
+  .Myfooter {
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile Devices (321px to 480px) */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  .card {
+    max-width: 98%;
+    padding: 1rem 0.8rem 2rem 0.8rem;
+    margin: 3% auto;
+    border-radius: 15px;
+  }
+
+  .avatar {
+    height: 160px;
+    width: 190px;
+    margin: 30px auto 20px auto;
+  }
+
+  .Myname {
+    font-size: 28px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+
+  .Dev {
+    font-size: 18px;
+  }
+
+  .progr {
+    font-size: 20px;
+    margin: 30px 0px 20px 0px;
+  }
+
+  ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 8px 0px;
+    padding: 5px;
+  }
+
+  .fa-linkedin {
+    margin: 10px auto 5px auto;
+    display: block;
+    width: fit-content;
+    padding: 12px;
+  }
+
+  .Myfooter {
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Mobile Devices (up to 320px) */
 @media only screen and (max-width: 320px) {
+  .card {
+    max-width: 100%;
+    padding: 0.8rem 0.5rem 1.5rem 0.5rem;
+    margin: 2% auto;
+    border-radius: 10px;
+  }
+
+  .avatar {
+    height: 130px;
+    width: 160px;
+    margin: 20px auto 15px auto;
+  }
+
+  .Myname {
+    font-size: 24px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .Dev {
+    font-size: 16px;
+  }
+
+  .progr {
+    font-size: 18px;
+    margin: 25px 0px 15px 0px;
+  }
+
+  ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 14px;
+    margin: 6px 0px;
+    padding: 4px;
+  }
+
+  .fa-linkedin {
+    margin: 8px auto 3px auto;
+    display: block;
+    width: fit-content;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .Myfooter {
+    position: fixed;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 10px;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media only screen and (max-height: 600px) and (orientation: landscape) {
+  .card {
+    margin: 2% auto;
+    padding: 1rem;
+  }
+
   .avatar {
     height: 120px;
     width: 150px;
+    margin: 10px auto;
   }
 
-  .card {
-    padding: 1rem 0.5rem;
-    max-width: 100%;
+  .Myname {
+    font-size: 24px;
+    margin-bottom: 5px;
   }
 
-  .card h1,
-  .card p {
-    font-size: 1rem;
+  .Dev {
+    font-size: 16px;
+  }
+
+  .progr {
+    font-size: 18px;
+    margin: 15px 0px 10px 0px;
+  }
+
+  ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .Myfooter {
+    position: fixed;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
   }
 }
 
-@media (min-width: 550px) {
-  .card {
-    flex-direction: row;
-    padding: 2rem 4rem;
-  }
-}
-
+/* Existing styles with improvements */
 p {
   border-bottom: 2px solid white;
   border-left: 1px solid white;
@@ -121,7 +382,13 @@ p {
   text-shadow: 0px 0px 5px black;
   border-radius: 15px;
   box-shadow: 2px 2px 8px black;
-  background-color: rgb(105, 101, 85);
+  background-color: rgba(105, 101, 85, 0.9);
+  transition: all 0.3s ease;
+}
+
+p:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 12px black;
 }
 
 i {
@@ -133,11 +400,13 @@ i {
   text-shadow: 2px 3px 5px black;
   letter-spacing: 2px;
   margin-bottom: 10px;
+  transition: all 0.3s ease;
 }
 
 .Dev {
   font-size: 22px;
   text-shadow: 2px 2px 7px black;
+  transition: all 0.3s ease;
 }
 
 .progr {
@@ -145,11 +414,7 @@ i {
   text-shadow: 3px 5px 8px black;
   font-size: 24px;
   letter-spacing: 0.8px;
-}
-
-p {
-  font-size: 20px;
-  margin: 15px 0px 0px 0px;
+  transition: all 0.3s ease;
 }
 
 .fa {
@@ -159,6 +424,7 @@ p {
   text-decoration: none;
   margin: 5px 2px;
   border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
 .fa-linkedin {
@@ -166,22 +432,36 @@ p {
   background: #007bb5;
   color: white;
   margin: 20px 0px 10px 50px;
-  transition-duration: 0.2s;
-  transition-property: border-radius, font-size;
+  transition: all 0.3s ease;
   margin-bottom: 0px;
 }
 
 .fa-linkedin:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 7px whitesmoke;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 18px;
+  transform: scale(1.05);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 ul li {
   margin-bottom: 15px;
   color: rgb(223, 223, 63);
   font-size: 20px;
+  transition: all 0.3s ease;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+ul li:hover {
+  background-color: rgba(223, 223, 63, 0.1);
+  transform: translateX(5px);
 }
 
 .Myfooter {
@@ -192,11 +472,75 @@ ul li {
   color: rgb(231, 228, 228);
   font-family: inter, Bricolage Grotesque, Tahoma, sans-serif;
   letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
-@media (min-width: 510px) {
+/* Flexbox layout for larger screens */
+@media (min-width: 550px) {
+  .card {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .avatar {
+    margin: 0;
+    flex-shrink: 0;
+  }
+
   .Myfooter {
-    flex-direction: column;
-    padding: 2rem 4rem;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
+/* High DPI display adjustments */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .avatar {
+    image-rendering: -webkit-optimize-contrast;
+  }
+
+  .card {
+    box-shadow: 24px 16px 30px rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* Print styles */
+@media print {
+  .bg_video {
+    display: none;
+  }
+
+  .card {
+    background: white;
+    color: black;
+    box-shadow: none;
+    border: 2px solid black;
+  }
+
+  .Myfooter {
+    position: static;
+    margin: 20px 0 0 0;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: rgba(20, 30, 40, 0.95);
+    border-color: #ffd700;
   }
 }
